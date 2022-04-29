@@ -571,15 +571,15 @@ main .banner1 {
 
 .newsWrap {
   width: 100%;
-  height: 54px;
+  height: 64px;
   border-top: 1px solid #a4a4a4;
   border-bottom: 1px solid #a4a4a4;
 }
 
 .newsWrapInner {
   display: flex !important;
-  height: 54px;
-  line-height: 54px;
+  height: 64px;
+  line-height: 64px;
 }
 
 .newsWrapInner span:first-child {
@@ -590,11 +590,12 @@ main .banner1 {
 .newsWrapInner span:first-child a {
   font-size: 1.8rem;
   font-weight: 700;
+  
 }
-.newsWrapInner span:first-child::before {
+.newsWrapInner>span:first-child::before {
   content: "";
   width: 1px;
-  height: 18px;
+  height: 28px;
   background: #a4a4a4;
   position: absolute;
   right: -3rem;
@@ -606,9 +607,15 @@ main .banner1 {
   margin-left: 6rem;
 }
 .newsWrapInner span:nth-child(2) a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
+.newsDate {
+  font-size: 1.1rem;
+  color: #a4a4a4;
+  
+}
+
 .newsWrapInner span:first-child a:hover {
   color: #cc1c28;
 }
@@ -619,8 +626,9 @@ main .banner1 {
 /* ---------------etc 시작-------------- */
 .main4 {
   width: 60%;
-  margin: 56px auto 135px;
+  margin: 30px auto 135px;
   min-width: 850px;
+  
 }
 .etcWrapper {
   width: 100%;
@@ -738,7 +746,6 @@ main .banner1 {
 .scheduleInner {
   width: 100%;
   height: 275px;
-  background: #fff;
   position: relative;
 }
 .scheduleInner::before {
@@ -768,7 +775,7 @@ main .banner1 {
   height: 30px;
   margin: 0 auto;
   padding: 20px 0 30px;
-  color: #181818;
+  color: #ececec;
 }
 .lecture {
   width: 80%;
@@ -791,15 +798,16 @@ main .banner1 {
   width: 85%;
   display: block;
   margin: 12px auto 4px;
-  color: #080808;
+  color: #ececec;
 }
+.lecture a:hover {font-weight: 600;}
 
 .lecture a::before {
   content: "";
   width: 6px;
   height: 6px;
   border-radius: 3px;
-  background: #181818;
+  background: #ececec;
   position: absolute;
   top: 35%;
   left: -8.5%;
