@@ -42,10 +42,9 @@ $(function () {
   //search 시작
   $(".searchIcon").on("click", function () {
     $(".search").stop().slideDown(300);
-  });
-  $(".searchIcon").on("click", function () {
     $(".modal").stop().show();
   });
+
   $(".search button").on("click", function () {
     $(".search").stop().slideUp(300);
     $(".modal").stop().hide();
