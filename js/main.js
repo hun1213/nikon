@@ -1,6 +1,6 @@
 $(function () {
   $(document).ready(function () {
-    $(".banner2Wrap").slick({
+    $(".banner2-wrapper").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
@@ -11,7 +11,7 @@ $(function () {
       pauseOnHover: true,
     });
 
-    $(".newsWrap").slick({
+    $(".news-wrapper").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
@@ -24,23 +24,23 @@ $(function () {
     });
   });
 
-  $("#productGnb a").mouseenter(function () {
+  $("#product-gnb a").mouseenter(function () {
     $(this).next().stop().slideDown(300);
   });
 
-  $("#productGnb").mouseleave(function () {
-    $(".productInfoMenu").stop().slideUp(300);
+  $("#product-gnb").mouseleave(function () {
+    $(".product-info-menu").stop().slideUp(300);
   });
 
-  $(".subWrapper>a").mouseenter(function () {
+  $(".sub-wrapper>a").mouseenter(function () {
     $(this).next().stop().slideDown(300);
   });
 
-  $(".subWrapper").mouseleave(function () {
+  $(".sub-wrapper").mouseleave(function () {
     $(this).find(".sub").stop().slideUp(300);
   });
   //search 시작
-  $(".searchIcon").on("click", function () {
+  $(".search-icon").on("click", function () {
     $(".search").stop().slideDown(300);
     $(".modal").stop().show();
   });
