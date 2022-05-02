@@ -85,7 +85,7 @@
   content: url(../img/arrowl1.png);
 }
 [dir="rtl"] .slick-prev:before {
-  content: "→";
+  content: url(../img/arrowl1.png);
 }
 
 .slick-next {
@@ -100,7 +100,7 @@
   content: url(../img/arrowr1.png);
 }
 [dir="rtl"] .slick-next:before {
-  content: "←";
+  content: url(../img/arrowr1.png);
 }
 
 /* Dots */
