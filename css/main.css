@@ -673,7 +673,12 @@ main .banner1 {
   height: 90px;
   position: relative;
 }
-
+.video2 .video img:hover {
+  src: url(../img/videoSub1_on.png);
+}
+.video2:nth-child(2) .video img:hover {
+  src: url(../img/videoSub1_on.png);
+}
 .video {
   height: 100%;
   width: 100%;
