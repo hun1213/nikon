@@ -531,9 +531,11 @@ main .banner1 {
 .slick-prev {
   left: 0;
   z-index: 1;
+  top: 40%;
 }
 .slick-next {
   right: 24px;
+  top: 40%;
 }
 .slick-dots {
   position: absolute;
@@ -590,9 +592,8 @@ main .banner1 {
 .news-wrapper-inner span:first-child a {
   font-size: 1.8rem;
   font-weight: 700;
-  
 }
-.news-wrapper-inner>span:first-child::before {
+.news-wrapper-inner > span:first-child::before {
   content: "";
   width: 1px;
   height: 28px;
@@ -613,7 +614,6 @@ main .banner1 {
 .news-date {
   font-size: 1.1rem;
   color: #a4a4a4;
-  
 }
 
 .news-wrapper-inner span:first-child a:hover {
@@ -628,7 +628,6 @@ main .banner1 {
   width: 60%;
   margin: 30px auto 135px;
   min-width: 850px;
-  
 }
 .etc-wrapper {
   width: 100%;
@@ -800,7 +799,9 @@ main .banner1 {
   margin: 12px auto 4px;
   color: #ececec;
 }
-.lecture a:hover {font-weight: 600;}
+.lecture a:hover {
+  font-weight: 600;
+}
 
 .lecture a::before {
   content: "";
@@ -1061,17 +1062,12 @@ footer {
   .banner1 {
     min-width: 700px;
   }
-  .slick-prev {
-    left: 0;
-    z-index: 1;
+
+  /* 공지사항 시작 */
+  .news-date {
+    display: none;
   }
-  .slick-next {
-    right: 24px;
-    z-index: 1;
-  }
-/* 공지사항 시작 */
-  .news-date {display: none;}
-/* etc 시작 */
+  /* etc 시작 */
   .etc-wrapper {
     width: 100%;
     display: block;
