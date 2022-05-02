@@ -1069,7 +1069,9 @@ footer {
     right: 24px;
     z-index: 1;
   }
-
+/* 공지사항 시작 */
+  .news-date {display: none;}
+/* etc 시작 */
   .etc-wrapper {
     width: 100%;
     display: block;
