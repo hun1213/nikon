@@ -1,0 +1,393 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+html {
+  background: #242424;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.eng {
+  font-family: "Roboto", sans-serif;
+}
+.ko {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/*-------------- header 시작 --------------*/
+
+header {
+  width: 100%;
+  height: 64px;
+}
+.gnb-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #080808;
+  z-index: 3;
+}
+.gnb {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  min-width: 850px;
+}
+
+.logo-box {
+  height: 64px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-box img {
+  width: 100%;
+}
+
+.menu-box {
+  width: 65%;
+  display: flex;
+}
+.menu-content {
+  width: 16.6666%;
+  text-align: center;
+  height: 64px;
+  line-height: 64px;
+}
+.menu-content a {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.icon-box-wrapper {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+}
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*-------------- header 끝 --------------*/
+
+/*-------------- component1 시작 --------------*/
+.component1 {
+  height: 404px;
+  display: flex;
+  align-items: center;
+}
+.main-text-box {
+  width: 80%;
+  margin-left: 20%;
+  /* min-width: 850px; */
+}
+
+.main-text-box p:first-child {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #c5c5c5;
+}
+.main-text-box p:first-child span {
+  color: #fff;
+}
+.main-text-box p:nth-child(2) {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+.main-text-box p:nth-child(2) span {
+  color: #cc1c28;
+}
+/*-------------- component1 끝 --------------*/
+
+/*-------------- component2 시작 --------------*/
+.component2 {
+  width: 100%;
+  height: 228px;
+}
+.nav-wrapper {
+  width: 80%;
+  height: 228px;
+  margin-left: 20%;
+  /* min-width: 850px; */
+  border-radius: 3px 0 0 3px;
+  background: #ececec;
+  position: relative;
+}
+.nav-wrapper::before {
+  content: "";
+  width: 6px;
+  height: 228px;
+  background: #cc1c28;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.nav {
+  width: 75%;
+  height: 228px;
+  display: flex;
+}
+.nav-li {
+  width: 20%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-li::before {
+  content: "";
+  width: 1px;
+  height: 180px;
+  background: #d4d4d4;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-li a {
+  display: block;
+
+  width: 70%;
+}
+.nav-li a img {
+  width: 100%;
+}
+.nav-li a p {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #080808;
+  margin-top: 3rem;
+}
+
+/*-------------- component2 끝 --------------*/
+
+/*-------------- component3 시작 --------------*/
+.component3 {
+  width: 100%;
+  height: 588px;
+  margin: 88px 0;
+}
+.product-wrapper {
+  width: 100%;
+  height: 588px;
+  /* min-width: 850px; */
+}
+.product-title {
+  display: flex;
+  margin-left: 20%;
+}
+.product-title h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  height: 25px;
+  line-height: 25px;
+}
+.product-title span {
+  color: #c5c5c5;
+  font-size: 2rem;
+  font-weight: 500;
+  vertical-align: bottom;
+  margin-left: 1.5rem;
+  height: 25px;
+  line-height: 25px;
+}
+.product-box-wrapper {
+  margin-top: 53px;
+}
+.product-box {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.product-box-li {
+  width: 19%;
+  height: 510px;
+  border-radius: 11px;
+  background-color: #ececec;
+  margin-right: 1%;
+  font-size: 10rem;
+  color: #cc1c28;
+}
+.product-box-li a {
+  display: block;
+  height: 510px;
+}
+.product-info {
+  color: #080808;
+}
+.name {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.category {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.price {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.price del {
+  font-size: 2rem;
+  color: #242424;
+  font-weight: 300;
+}
+.product-box-li-fake {
+  background: #242424;
+  height: 510px;
+  width: 19%;
+  z-index: 2;
+  margin-right: 1%;
+}
+
+.slick-prev {
+  left: 100px;
+  top: 40%;
+  z-index: 1;
+}
+.slick-prev::before {
+  z-index: 1;
+}
+.slick-next {
+  right: 100px;
+  top: 40%;
+}
+
+/*-------------- component3 끝 --------------*/
+
+/*-------------- component4 시작 --------------*/
+.component4 {
+  width: 100%;
+  height: 505px;
+  margin-bottom: 112px;
+}
+.banner1-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  /* min-width: 850px; */
+}
+.banner1-wrapper a {
+  width: 100%;
+  height: 505px;
+  display: block;
+  background-image: url("../img/Eshop/banner_1_pc.png");
+  background-size: cover;
+  position: relative;
+  border-radius: 48px;
+}
+.banner1-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.banner1-text p {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.banner1-text p span {
+  color: #ee8051;
+}
+
+.banner1-text p:nth-child(2) {
+  margin-top: 2rem;
+}
+.banner1-text p:nth-child(3) {
+  font-size: 3rem;
+  font-weight: 500;
+  opacity: 0.5;
+  color: #ececec;
+  text-indent: 0.2rem;
+  margin-top: 6rem;
+}
+.banner1-text p:nth-child(3):hover {
+  opacity: 1;
+}
+
+/*-------------- component4 끝 --------------*/
+
+/*-------------- component5 시작 --------------*/
+.component5 {
+  width: 100%;
+  height: 588px;
+  margin: 88px 0;
+}
+.timesale-wrapper {
+  width: 100%;
+  height: 588px;
+  /* min-width: 850px; */
+}
+.timesale-title {
+  display: flex;
+  margin-left: 20%;
+}
+.timesale-title h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  height: 25px;
+  line-height: 25px;
+}
+.timesale-title span {
+  color: #c5c5c5;
+  font-size: 2rem;
+  font-weight: 500;
+  vertical-align: bottom;
+  margin-left: 1.5rem;
+  height: 25px;
+  line-height: 25px;
+}
+.timesale-box-wrapper {
+  margin-top: 53px;
+}
+.timesale-box {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.timesale-box-li {
+  width: 19%;
+  height: 510px;
+  border-radius: 11px;
+  background-color: #ececec;
+  margin-right: 1%;
+  font-size: 10rem;
+  color: #cc1c28;
+}
+.timesale-box-li-fake {
+  background: #242424;
+  height: 510px;
+  width: 19%;
+  z-index: 2;
+  margin-right: 1%;
+}
+
+.slick-prev {
+  left: 100px;
+  top: 40%;
+  z-index: 1;
+}
+.slick-prev::before {
+  z-index: 1;
+}
+.slick-next {
+  right: 100px;
+  top: 40%;
+}
+/*-------------- component5 끝 --------------*/
+
+/*-------------- component6 시작 --------------*/
+
+/*-------------- component6 끝 --------------*/
