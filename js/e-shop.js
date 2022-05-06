@@ -5,6 +5,14 @@ $(function () {
       slidesToShow: 5,
       arrows: true,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1568,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+      ],
     });
   });
 
@@ -14,6 +22,14 @@ $(function () {
       slidesToShow: 5,
       arrows: true,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1568,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+      ],
     });
   });
 });
