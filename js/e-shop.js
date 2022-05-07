@@ -4,12 +4,13 @@ $(function () {
       infinite: false,
       slidesToShow: 5,
       arrows: true,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 1568,
           settings: {
             slidesToShow: 4,
+            slidesToScroll: 2,
           },
         },
       ],
@@ -21,12 +22,13 @@ $(function () {
       infinite: false,
       slidesToShow: 5,
       arrows: true,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 1568,
           settings: {
             slidesToShow: 4,
+            slidesToScroll: 2,
           },
         },
       ],
