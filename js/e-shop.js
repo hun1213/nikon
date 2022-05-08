@@ -4,7 +4,7 @@ $(function () {
       infinite: false,
       slidesToShow: 5,
       arrows: true,
-      slidesToScroll: 3,
+      slidesToScroll: 2,
       responsive: [
         {
           breakpoint: 1568,
@@ -22,7 +22,7 @@ $(function () {
       infinite: false,
       slidesToShow: 5,
       arrows: true,
-      slidesToScroll: 3,
+      slidesToScroll: 2,
       responsive: [
         {
           breakpoint: 1568,
