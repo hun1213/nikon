@@ -5,7 +5,7 @@ html {
   background: #242424;
   font-size: 10px;
   width: 100%;
-  min-width: 1200px;
+  min-width: 1400px;
 }
 
 a {
@@ -24,15 +24,13 @@ a {
 header {
   width: 100%;
   height: 64px;
-  min-width: 1200px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 .gnb-wrapper {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   background: #080808;
-  z-index: 3;
 }
 .gnb {
   width: 70%;
@@ -93,6 +91,47 @@ header {
   justify-content: center;
   align-items: center;
 }
+.search-icon {
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+  display: none;
+  height: 70px;
+  background-color: #fff;
+}
+.modal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.search-inner {
+  padding: 2rem 0;
+}
+.search form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+}
+.search input {
+  width: 100%;
+  font-size: 2.4rem;
+  border: none;
+}
+.search button {
+  width: 30px;
+  height: 30px;
+  font-size: 2.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.search input:focus {
+  outline: none;
+}
 /*-------------- header 끝 --------------*/
 
 /*-------------- component1 시작 --------------*/
@@ -100,7 +139,6 @@ header {
   height: 404px;
   display: flex;
   align-items: center;
-  min-width: 850px;
 }
 .main-text-box {
   width: 80%;
@@ -130,7 +168,6 @@ header {
 .component2 {
   width: 100%;
   height: 228px;
-  min-width: 850px;
 }
 .nav-wrapper {
   width: 80%;
@@ -196,7 +233,6 @@ header {
   width: 100%;
   height: 658px;
   margin: 88px 0;
-  min-width: 850px;
 }
 .product-wrapper {
   width: 100%;
@@ -230,14 +266,15 @@ header {
   width: 100%;
   display: flex;
   height: 580px;
+  left: -2rem;
 }
 
 .product-box-li {
-  width: 19%;
+  width: 20%;
   height: 550px;
   border-radius: 11px;
   background-color: #ececec;
-  margin-right: 1%;
+  /* margin-right: 1%; */
   font-size: 10rem;
   color: #cc1c28;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
@@ -275,6 +312,7 @@ header {
   opacity: 0.8;
   font-weight: 700;
   padding-top: 4rem;
+  width: 80%;
 }
 .category {
   font-size: 1.2rem;
@@ -297,9 +335,7 @@ header {
 .product-box-li-fake {
   background: #242424;
   height: 510px;
-  width: 19%;
-  z-index: 2;
-  margin-right: 1%;
+  width: 20%;
 }
 
 .slick-prev {
@@ -322,7 +358,6 @@ header {
   width: 100%;
   height: 505px;
   margin-bottom: 112px;
-  min-width: 850px;
 }
 .banner1-wrapper {
   width: 60%;
@@ -375,7 +410,6 @@ header {
   width: 100%;
   height: 658px;
   margin: 88px 0;
-  min-width: 850px;
 }
 .timesale-wrapper {
   width: 100%;
@@ -409,6 +443,7 @@ header {
   width: 100%;
   height: 580px;
   display: flex;
+  left: -2rem;
 }
 .price del {
   font-size: 2rem;
@@ -435,7 +470,7 @@ header {
 }
 .cscenter-wrapper {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 113px auto;
   height: 542px;
 }
 .cscenter-title {
@@ -511,7 +546,7 @@ header {
 .cscenter-small-icon-wrapper img {
   width: 100%;
 }
-.cscenter-grid-item:hover {
+.cscenter-grid-item:nth-child(n + 3):hover {
   transform: scale(1.1);
 }
 .cscenter-grid-item:nth-child(n + 3):nth-child(-n + 6):hover {
@@ -522,11 +557,12 @@ header {
   grid-row: 2/4;
   background: #598bed;
 }
+
 .cscenter-grid-item:nth-child(7) h2 {
   color: #ececec;
 }
 .map-icon-wrapper {
-  width: 55%;
+  width: 45%;
   margin: 4rem auto 0 auto;
   position: relative;
 }
@@ -597,16 +633,82 @@ header {
   bottom: 1rem;
   right: 4rem;
 }
+.cscenter-grid-item:nth-child(8):hover {
+  background: #fff;
+}
 /*-------------- component6 끝 --------------*/
+
+/* -------------footer 시작------------------ */
+footer {
+  width: 100%;
+  background: #080808;
+}
+.footer {
+  padding: 2rem 0;
+  margin: 0 auto;
+  width: 60%;
+  position: relative;
+  color: #ececec;
+  background: #080808;
+}
+
+.copyright {
+  color: #6c6c6c;
+  font-weight: 700;
+}
+.footer-selector-wrapper {
+  margin: 1rem 0;
+  display: flex;
+}
+.footer-selector {
+  margin-right: 1rem;
+}
+.footer-selector a:hover {
+  color: #cc1c28;
+}
+.footer-etc {
+  color: #6c6c6c;
+  margin-top: 1rem;
+}
+
+.to-top {
+  width: 70px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+}
+.to-top img {
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------footer 끝------------------ */
+
+/* -------------반응형 시작------------------ */
 @media screen and (max-width: 1568px) {
+  .product-title,
+  .timesale-title {
+    margin-left: 10%;
+  }
+  .main-text-box,
+  .nav-wrapper {
+    margin-left: 10%;
+    width: 90%;
+  }
+  .banner1-wrapper,
+  .cscenter-wrapper {
+    width: 80%;
+  }
   .product-box {
-    width: 107%;
+    width: 117%;
     position: relative;
-    left: -7%;
+    left: -20%;
   }
   .timesale-box {
-    width: 107%;
+    width: 117%;
     position: relative;
-    left: -7%;
+    left: -20%;
   }
 }

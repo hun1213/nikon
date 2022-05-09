@@ -5,83 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="js/jquery-1.11.2.min.js" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
     <title>Document</title>
     <style>
-      div {
-        width: 300px;
-        height: 300px;
-        position: relative;
+      .swiper {
+        width: 100%;
+        height: 90%;
+      }
+      .swiper-slide:nth-child(1) {
         background-color: aqua;
       }
-      #ab:hover .a1 img {
-        transform: rotate(360deg);
+      .swiper-slide:nth-child(2) {
+        background-color: tomato;
       }
-      #ab:hover .a2 img {
-        transform: rotate(-360deg);
-      }
-      #ab:hover .a3 img {
-        transform: rotate(-360deg);
-      }
-      .a1 img {
-        transform: rotate(0deg);
-        transition: all 3s;
-      }
-      .a2 img {
-        transform: rotate(0deg);
-        transition: all 3s;
-      }
-      .a3 img {
-        transform: rotate(0deg);
-        transition: all 3s;
-      }
-      .a1 {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        left: 100px;
-        bottom: 10px;
-      }
-      .a2 {
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        right: 60px;
-        top: 115px;
-      }
-      .a3 {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        left: 100px;
-        bottom: 110px;
-      }
-      .a4 {
-        width: 200px;
-        height: 60px;
-        position: absolute;
-        bottom: -60px;
-        left: 50px;
-      }
-      img {
-        width: 100%;
+      .swiper-slide:nth-child(3) {
+        background-color: black;
       }
     </style>
   </head>
   <body>
-    <div id="ab" style="margin: 100px">
-      <div class="a1"><img src="img/icons/gear1.svg" alt="" /></div>
-      <div class="a2"><img src="img/icons/gear1.svg" alt="" /></div>
-      <div class="a3"><img src="img/icons/gear1.svg" alt="" /></div>
-      <div class="a4"><img src="img/icons/gearHand.svg" alt="" /></div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+      </div>
     </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
-      $(function () {
-        $("#ab").on("mouseenter", function () {
-          $(".a3 img").attr("src", "img/icons/gear1On.svg");
-        });
-        $("#ab").on("mouseleave", function () {
-          $(".a3 img").attr("src", "img/icons/gear1.svg");
-        });
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "vertical",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
       });
     </script>
   </body>

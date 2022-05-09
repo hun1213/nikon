@@ -22,6 +22,14 @@ $(function () {
       pauseOnHover: true,
       vertical: true,
     });
+
+    $(".eshop-mobile-box-wrapper").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      infinity: false,
+    });
   });
 
   $("#product-gnb a").mouseenter(function () {
@@ -80,4 +88,7 @@ $(function () {
     video2_2Off.attr("src", "img/main/videoSub2_off.png");
   });
   //video2 끝
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+  });
 });

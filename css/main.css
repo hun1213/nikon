@@ -23,6 +23,9 @@ body {
   background-color: #242424;
 }
 
+.header-mobile {
+  display: none;
+}
 header {
   position: fixed;
   top: 0;
@@ -35,7 +38,6 @@ header {
   width: 60%;
   height: inherit;
   margin: 0 auto;
-  min-width: 850px;
 }
 .header-inner {
   display: flex;
@@ -238,8 +240,6 @@ header .icons a:first-child {
   width: 60%;
   margin: 0 auto;
   display: flex;
-
-  min-width: 850px;
 }
 .search input {
   width: 100%;
@@ -261,11 +261,13 @@ header .icons a:first-child {
 /*--------------- gnb 끝 ---------------- */
 
 /* --------------------배너 1 시작------------- */
+.banner1-mobile {
+  display: none;
+}
 main .banner1 {
   width: 100%;
   margin-top: 60px;
   height: 71.4rem;
-  min-width: 850px;
   background: url(../img/main/banner1_pc.png) no-repeat center;
   background-size: cover;
   position: relative;
@@ -301,7 +303,6 @@ main .banner1 {
 .eshop-wapper {
   width: 60%;
   margin: 112px auto 0 auto;
-  min-width: 850px;
 }
 .eshop-wapper h1 {
   margin-bottom: 25px;
@@ -379,11 +380,11 @@ main .banner1 {
   height: 100%;
   min-height: 140px;
   min-width: 190px;
-  transform: scale(1);
+  transform: scale(0.9);
   transition: all 0.3s;
 }
 .b1-wrapper:hover .b1-inner-image img {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 #b2 {
@@ -507,7 +508,6 @@ main .banner1 {
 .main2 {
   width: 60%;
   margin: 112px auto;
-  min-width: 850px;
 }
 .banner2-wrapper {
   width: 100%;
@@ -570,7 +570,6 @@ main .banner1 {
 .main3 {
   width: 60%;
   margin: 0 auto;
-  min-width: 850px;
 }
 
 .news-wrapper {
@@ -629,7 +628,6 @@ main .banner1 {
 .main4 {
   width: 60%;
   margin: 30px auto 135px;
-  min-width: 850px;
 }
 .etc-wrapper {
   width: 100%;
@@ -856,7 +854,6 @@ footer {
   padding: 2rem 0;
   margin: 0 auto;
   width: 60%;
-  min-width: 850px;
   position: relative;
   color: #ececec;
   background: #080808;
@@ -893,7 +890,67 @@ footer {
   width: 100%;
   height: 100%;
 }
+.mobile-main {
+  display: none;
+}
 /* -------------footer 끝------------------ */
+
+/* --------------애니메이션 시작------------ */
+
+.animated {
+  animation-duration: 1s;
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fadeInOut {
+  animation-name: fadeInOut;
+}
+@keyframes fadeInOut {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+.delay-2 {
+  animation-delay: 1s;
+}
+.delay-3 {
+  animation-delay: 2s;
+}
+/* --------------애니메이션 끝------------ */
+
 /* ---------------반응형---------------- */
 /* pc */
 @media screen and (min-width: 1080px) and (max-width: 1300px) {
@@ -918,7 +975,10 @@ footer {
 }
 
 /* Tablet 시작 */
-@media screen and (max-width: 1079px) {
+@media screen and (min-width: 481px) and (max-width: 1079px) {
+  html {
+    min-width: 700px;
+  }
   .gnb > li > a {
     min-width: none;
   }
@@ -1060,10 +1120,6 @@ footer {
   .eshop-wapper,
   .search form {
     width: 80%;
-    min-width: 700px;
-  }
-  .banner1 {
-    min-width: 700px;
   }
 
   /* 공지사항 시작 */
@@ -1180,4 +1236,195 @@ footer {
   .view-more a:hover::before {
     content: url(../img/main/icons/plus_on.svg);
   }
+}
+@media screen and (max-width: 480px) {
+  html {
+    min-width: 300px;
+  }
+  .pc-tablet-main {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .mobile-main {
+    display: block;
+  }
+  header {
+    height: 64px;
+    opacity: 0.8;
+  }
+  .header-mobile {
+    display: block;
+  }
+  .gnb-mobile {
+    width: 85%;
+    margin: 0 auto;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .gnb-logo-mobile {
+    width: 80px;
+  }
+  .gnb-logo-mobile img {
+    width: 100%;
+  }
+  .hamburger svg {
+    background: #ececec;
+  }
+  .banner1-mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+  /* .swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  } */
+
+  .banner1-video-wrapper-mobile video {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  .jb-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 100%;
+  }
+  .jb-text p {
+    font-size: 6vw;
+    font-weight: 400;
+    color: #a4a4a4;
+    margin-bottom: 1rem;
+  }
+  .jb-text h2 {
+    max-width: 80vw;
+    text-align: left;
+    margin-bottom: 3rem;
+    font-size: 8vw;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .jb-text h2:nth-child(3) {
+    font-size: 14vw;
+    font-weight: 800;
+  }
+
+  .jb-text p span {
+    color: #cc1c28;
+  }
+  .jb-text-page {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+  .jb-text-page p {
+    font-size: 1.5rem;
+    color: #6c6c6c;
+  }
+  .jb-text-page span {
+    color: #ececec;
+  }
+
+  /* eshop 모바일 시작 */
+  .eshop-mobile-container {
+    width: 100%;
+    margin-top: 8vh;
+    background-color: #080808;
+  }
+  .eshop-mobile-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .eshop-mobile-title {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .eshop-mobile-title h2 {
+    color: #ececec;
+    font-size: 5vw;
+  }
+  .eshop-mobile-box-wrapper {
+    overflow: visible;
+    padding-bottom: 2rem;
+  }
+
+  .eshop-mobile-box {
+    background: #ececec;
+    width: 80%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+  }
+  .eshop-mobile-box-image {
+    width: 60%;
+    height: 65%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .eshop-mobile-box-image img {
+    width: 100%;
+  }
+  .eshop-mobile-box-info {
+    width: 100%;
+    height: 35%;
+    background: #131313;
+  }
+  .eshop-mobile-box-info ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .eshop-mobile-box-info ul li {
+    color: #ececec;
+  }
+  .product-name-mobile {
+    font-size: 0.8rem;
+    font-weight: 500;
+    max-width: 92%;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+  }
+
+  .category-mobile {
+    font-size: 0.6rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+    position: absolute;
+    left: 1.5rem;
+    bottom: 2rem;
+    color: #a4a4a4;
+  }
+  .price-mobile {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    left: 1.5rem;
+    bottom: 0.5rem;
+  }
+  .eshop-entre {
+    background: #cc1c28;
+  }
+  /* the slides */
+  .slick-slide {
+    margin: 0 1rem;
+  }
+
+  /* the parent */
+  .slick-list {
+    margin: 0 -1rem;
+  }
+  /* eshop 모바일 끝 */
 }
