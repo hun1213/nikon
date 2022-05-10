@@ -28,7 +28,7 @@ $(function () {
       slidesToScroll: 1,
       arrows: false,
       dots: false,
-      infinity: false,
+      infinite: false,
     });
   });
 
@@ -91,4 +91,27 @@ $(function () {
   const swiper = new Swiper(".swiper", {
     // Optional parameters
   });
+
+  //tablet 햄버거 메뉴 시작
+  let width = $(window).width();
+  if (width >= 1080) {
+    $(".gnb-menu-wrapper-tm").css("display", "none");
+  } else {
+    $(".hamburger-icon-tm").click(function () {
+      if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
+        $(this).removeClass("active-1");
+        $(".gnb-menu-wrapper-tm").slideUp(300);
+      } else {
+        $(this).addClass("active-1");
+        $(".gnb-menu-wrapper-tm").slideDown(300);
+      }
+    });
+  }
+  $(".hamburger-icon-tm")
+    .siblings()
+    .click(function () {
+      $(".hamburger-icon-tm").removeClass("active-1");
+      $(".gnb-menu-wrapper-tm").slideUp(300);
+    });
+  //tablet 햄버거 메뉴 시작
 });

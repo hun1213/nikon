@@ -3,7 +3,6 @@
 
 html {
   width: 100%;
-  min-width: 850px;
   font-size: 10px;
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
@@ -23,20 +22,24 @@ body {
   background-color: #242424;
 }
 
-.header-mobile {
+.header-tm {
   display: none;
 }
+.gnb-menu-wrapper-tm {
+  display: none;
+}
+
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 64px;
+
   background: #080808;
   z-index: 2;
 }
 .header {
   width: 60%;
-  height: inherit;
+  height: 64px;
   margin: 0 auto;
 }
 .header-inner {
@@ -62,7 +65,6 @@ header .logo > img {
 }
 header .gnb > li {
   width: 16.666666%;
-  min-width: 70px;
 }
 
 header .gnb > li > a {
@@ -373,13 +375,11 @@ main .banner1 {
 .b1-inner-image {
   width: 65%;
   margin: 0 auto 0 30%;
-  min-width: 180px;
 }
 .b1-inner-image img {
   width: 100%;
   height: 100%;
-  min-height: 140px;
-  min-width: 190px;
+
   transform: scale(0.9);
   transition: all 0.3s;
 }
@@ -713,7 +713,6 @@ main .banner1 {
 }
 .video-more {
   width: 50%;
-  min-width: 90px;
   height: 30px;
   background: #080808;
   text-align: left;
@@ -958,6 +957,7 @@ footer {
     width: 220%;
     left: -62%;
   }
+
   .product-info-menu dl dd {
     font-size: 1.2rem;
     text-indent: 0;
@@ -976,43 +976,162 @@ footer {
 
 /* Tablet 시작 */
 @media screen and (min-width: 481px) and (max-width: 1079px) {
-  html {
-    min-width: 700px;
+  .header {
+    display: none;
   }
-  .gnb > li > a {
-    min-width: none;
+  .header-tm {
+    display: block;
+    width: 80%;
+    height: 64px;
+    margin: 0 auto;
   }
-  .product-info-menu {
-    width: 190%;
-    left: -45%;
-    height: 370px;
+  .gnb-tm {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .sub-inner {
-    height: 370px;
-  }
-  .product-info-menu dl dt {
-    padding-bottom: 1rem;
-  }
-  .product-info-menu dl dd {
-    font-size: 1.2rem;
+  .gnb-logo-tm {
+    flex: none;
 
-    text-align: center;
+    margin-right: auto;
+  }
+  .gnb-logo-tm img {
+    width: 100%;
+  }
+  .search-tm {
+    width: 36px;
+    height: 64px;
+    line-height: 64px;
+
+    margin-right: 2rem;
+    flex: none;
+  }
+  .search-tm img {
+    width: 100%;
+    vertical-align: middle;
   }
 
-  .product-info-menu-btn {
-    height: 30px;
+  /* ------tablet 햄버거 메뉴 시작------ */
+  .hamburger-icon-tm {
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
     position: relative;
-    top: -60px;
+    flex: none;
   }
-  .product-info-menu-btn a {
+  .hamburger-icon-tm::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ececec;
+    border-radius: 4px;
+    transform: translateY(0) rotate(0);
+    transition: all 0.3s;
+  }
+  .hamburger-icon-middle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    background-color: #ececec;
+    border-radius: 4px;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .hamburger-icon-tm::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ececec;
+    border-radius: 4px;
+    transform: translateY(0) rotate(0);
+    transition: all 0.3s;
+  }
+  .hamburger-icon-tm.active-1::after {
+    transform: translateY(10px) rotate(-45deg);
+    background-color: #fff;
+  }
+  .hamburger-icon-tm.active-1 .hamburger-icon-middle {
+    opacity: 0;
+    background-color: #fff;
+  }
+  .hamburger-icon-tm.active-1::before {
+    transform: translateY(-10px) rotate(45deg);
+    background-color: #fff;
+  }
+  /* ------tablet 햄버거 메뉴 끝------ */
+
+  .gnb-menu-wrapper-tm {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: #000;
+  }
+
+  .gnb-menu-tm {
+    width: 80%;
+    height: 70vh;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .gnb-li-tm {
+    width: 33.33333%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .gnb-li-tm > a {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .gnb-sub-li-tm > a {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 30px;
+    color: #a4a4a4;
+  }
+  .gnb-log-in-tm {
+    width: 80%;
+    margin: 0 auto;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .gnb-log-in-tm div {
+    width: 100px;
+    height: 30px;
+  }
+  .gnb-log-in-tm div:nth-child(1) {
+    background: #cc1c28;
+    border-radius: 6px;
+    text-align: center;
     height: 30px;
     line-height: 30px;
-    font-size: 1.2rem;
+  }
+  .gnb-log-in-tm div:nth-child(2) {
+    background: #6c6c6c;
+    border-radius: 6px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
   }
 
-  .sub li a {
-    font-size: 1rem;
-  }
   /* eshop tablet 시작 */
   .eshop-wapper h1 {
     margin-bottom: 25px;
@@ -1238,9 +1357,6 @@ footer {
   }
 }
 @media screen and (max-width: 480px) {
-  html {
-    min-width: 300px;
-  }
   .pc-tablet-main {
     display: none;
   }
@@ -1253,40 +1369,141 @@ footer {
   .mobile-main {
     display: block;
   }
-  header {
-    height: 64px;
-    opacity: 0.8;
-  }
-  .header-mobile {
+
+  .header-tm {
     display: block;
-  }
-  .gnb-mobile {
     width: 85%;
+    height: 64px;
     margin: 0 auto;
+  }
+  .gnb-tm {
+    width: 100%;
     height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .gnb-logo-mobile {
-    width: 80px;
+  .gnb-logo-tm {
+    flex: none;
+
+    margin-right: auto;
   }
-  .gnb-logo-mobile img {
+  .gnb-logo-tm img {
     width: 100%;
   }
-  .hamburger svg {
-    background: #ececec;
+  .search-tm {
+    width: 34px;
+    height: 64px;
+    line-height: 64px;
+    margin-right: 2rem;
+    flex: none;
   }
+  .search-tm img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  .hamburger-icon-tm {
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    flex: none;
+  }
+  .hamburger-icon-tm::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ececec;
+    border-radius: 3px;
+    transform: translateY(0) rotate(0);
+    transition: all 0.3s;
+  }
+  .hamburger-icon-middle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: #ececec;
+    border-radius: 3px;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .hamburger-icon-tm::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ececec;
+    border-radius: 3px;
+    transform: translateY(0) rotate(0);
+    transition: all 0.3s;
+  }
+  .hamburger-icon-tm.active-1::after {
+    transform: translateY(10px) rotate(-45deg);
+    background-color: #fff;
+  }
+  .hamburger-icon-tm.active-1 .hamburger-icon-middle {
+    opacity: 0;
+    background-color: #fff;
+  }
+  .hamburger-icon-tm.active-1::before {
+    transform: translateY(-10px) rotate(45deg);
+    background-color: #fff;
+  }
+  .gnb-menu-wrapper-tm {
+    display: none;
+    height: 100vh;
+  }
+  .gnb-li-tm {
+    height: 40px;
+    line-height: 40px;
+    text-indent: 20vw;
+  }
+  .gnb-li-tm a {
+    font-size: 1.5rem;
+  }
+  .gnb-log-in-tm {
+    margin: 5vh auto 0 auto;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .gnb-log-in-tm div {
+    width: 100px;
+    height: 30px;
+  }
+  .gnb-log-in-tm div:nth-child(1) {
+    background: #cc1c28;
+    border-radius: 6px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+  }
+  .gnb-log-in-tm div:nth-child(2) {
+    background: #6c6c6c;
+    border-radius: 6px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+  }
+  .gnb-sub-tm {
+    display: none;
+  }
+  /* =----end----- */
+
   .banner1-mobile {
     display: block;
     width: 100%;
     height: 100vh;
   }
-  /* .swiper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  } */
 
   .banner1-video-wrapper-mobile video {
     object-fit: cover;
@@ -1389,22 +1606,12 @@ footer {
     color: #ececec;
   }
   .product-name-mobile {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 500;
     max-width: 92%;
     position: absolute;
-    top: 1rem;
+    top: 1.2rem;
     left: 1.5rem;
-  }
-
-  .category-mobile {
-    font-size: 0.6rem;
-    font-weight: 300;
-    padding-bottom: 0.5rem;
-    position: absolute;
-    left: 1.5rem;
-    bottom: 2rem;
-    color: #a4a4a4;
   }
   .price-mobile {
     font-size: 1.4rem;
@@ -1412,7 +1619,7 @@ footer {
     font-family: "Roboto", sans-serif;
     position: absolute;
     left: 1.5rem;
-    bottom: 0.5rem;
+    bottom: 0.8rem;
   }
   .eshop-entre {
     background: #cc1c28;
