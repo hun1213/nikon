@@ -52,6 +52,10 @@ $(function () {
   $(".search-icon").on("click", function () {
     $(".search").stop().slideDown(300);
     $(".modal").stop().show();
+    if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
+      $(".hamburger-icon-tm").removeClass("active-1");
+      $(".gnb-menu-wrapper-tm").slideUp(300);
+    }
   });
 
   $(".search button").on("click", function () {
@@ -100,18 +104,18 @@ $(function () {
     $(".hamburger-icon-tm").click(function () {
       if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
         $(this).removeClass("active-1");
-        $(".gnb-menu-wrapper-tm").slideUp(300);
+        $(".gnb-menu-wrapper-tm").stop().slideUp(300);
       } else {
         $(this).addClass("active-1");
-        $(".gnb-menu-wrapper-tm").slideDown(300);
+        $(".gnb-menu-wrapper-tm").stop().slideDown(300);
       }
     });
   }
-  $(".hamburger-icon-tm")
-    .siblings()
-    .click(function () {
-      $(".hamburger-icon-tm").removeClass("active-1");
-      $(".gnb-menu-wrapper-tm").slideUp(300);
-    });
+  $(".logo, .gnb-logo-tm").click(function () {
+    $(".hamburger-icon-tm").removeClass("active-1");
+    $(".gnb-menu-wrapper-tm").stop().slideUp(300);
+    $(".search").stop().slideUp(300);
+    $(".modal").stop().hide();
+  });
   //tablet 햄버거 메뉴 시작
 });
