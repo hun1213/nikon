@@ -50,21 +50,17 @@ $(function () {
 
   //search 시작
   $(".search-icon").on("click", function () {
-    $(".search").stop().slideDown(300);
-    $(".modal").stop().show();
+    openSearch();
     if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
-      $(".hamburger-icon-tm").removeClass("active-1");
-      $(".gnb-menu-wrapper-tm").slideUp(300);
+      closeMobileMenu();
     }
   });
 
   $(".search button").on("click", function () {
-    $(".search").stop().slideUp(300);
-    $(".modal").stop().hide();
+    closeSearch();
   });
   $(".modal").on("click", function () {
-    $(".search").stop().slideUp(300);
-    $(this).stop().hide();
+    closeSearch();
   });
 
   //search 끝
@@ -96,26 +92,48 @@ $(function () {
     // Optional parameters
   });
 
-  //tablet 햄버거 메뉴 시작
-  let width = $(window).width();
-  if (width >= 1080) {
-    $(".gnb-menu-wrapper-tm").css("display", "none");
-  } else {
-    $(".hamburger-icon-tm").click(function () {
-      if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
-        $(this).removeClass("active-1");
-        $(".gnb-menu-wrapper-tm").stop().slideUp(300);
-      } else {
-        $(this).addClass("active-1");
-        $(".gnb-menu-wrapper-tm").stop().slideDown(300);
-      }
-    });
-  }
+
+  // gnb 메뉴 상호작용
+  $(window).resize(function () {
+    const windowWidth = $(window).width();
+    if (windowWidth >= 1080) {
+      $(".gnb-menu-wrapper-tm").css("display", "none");
+      $(".hamburger-icon-tm").removeClass("active-1");
+    }
+  });
+
+  $(".hamburger-icon-tm").click(function () {
+    toggleMobileMenu();
+  });
+
   $(".logo, .gnb-logo-tm").click(function () {
+    closeMobileMenu();
+    closeSearch();
+  });
+
+  toggleMobileMenu = () => {
+    if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  };
+
+  openMobileMenu = () => {
+    $(".hamburger-icon-tm").addClass("active-1");
+    $(".gnb-menu-wrapper-tm").stop().slideDown(300);
+  };
+
+  closeMobileMenu = () => {
     $(".hamburger-icon-tm").removeClass("active-1");
     $(".gnb-menu-wrapper-tm").stop().slideUp(300);
+  };
+  closeSearch = () => {
     $(".search").stop().slideUp(300);
     $(".modal").stop().hide();
-  });
-  //tablet 햄버거 메뉴 시작
+  };
+  openSearch = () => {
+    $(".search").stop().slideDown(300);
+    $(".modal").stop().show();
+  };
 });
