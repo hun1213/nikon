@@ -1497,6 +1497,12 @@ footer {
   .gnb-sub-tm {
     display: none;
   }
+  .search input {
+    font-size: 1.6rem;
+  }
+  .search button {
+    font-size: 2rem;
+  }
   /* =----end----- */
 
   .banner1-mobile {
