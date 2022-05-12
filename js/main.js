@@ -31,7 +31,7 @@ $(function () {
       infinite: false,
     });
   });
-
+  // gnb PC
   $("#product-gnb a").mouseenter(function () {
     $(this).next().stop().slideDown(300);
   });
@@ -46,6 +46,23 @@ $(function () {
 
   $(".sub-wrapper").mouseleave(function () {
     $(this).find(".sub").stop().slideUp(300);
+  });
+
+  //gnb Mobile
+
+  $(".gnb-li-tm > a").click(function () {
+    if ($(this).next().is(":visible")) {
+      $(".gnb-li-tm > a, .gnb-li-tm, .gnb-sub-tm").removeClass("active-2");
+      $(this).next().stop().slideUp(200);
+    } else {
+      $(".gnb-li-tm > a, .gnb-li-tm, .gnb-sub-tm").removeClass("active-2");
+      $(this).addClass("active-2");
+      $(this).parent().addClass("active-2");
+      $(this).next().addClass("active-2");
+
+      $(".gnb-sub-tm").stop().slideUp(200);
+      $(this).next().stop().slideDown(200);
+    }
   });
 
   //search 시작
@@ -88,10 +105,11 @@ $(function () {
     video2_2Off.attr("src", "img/main/videoSub2_off.png");
   });
   //video2 끝
+
+  //swiper
   const swiper = new Swiper(".swiper", {
     // Optional parameters
   });
-
 
   // gnb 메뉴 상호작용
   $(window).resize(function () {
@@ -111,6 +129,7 @@ $(function () {
     closeSearch();
   });
 
+  // 함수
   toggleMobileMenu = () => {
     if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
       closeMobileMenu();
@@ -123,10 +142,10 @@ $(function () {
     $(".hamburger-icon-tm").addClass("active-1");
     $(".gnb-menu-wrapper-tm").stop().slideDown(300);
   };
-
   closeMobileMenu = () => {
     $(".hamburger-icon-tm").removeClass("active-1");
     $(".gnb-menu-wrapper-tm").stop().slideUp(300);
+    $(".gnb-sub-tm").stop().hide();
   };
   closeSearch = () => {
     $(".search").stop().slideUp(300);

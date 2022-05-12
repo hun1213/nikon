@@ -28,7 +28,6 @@ body {
 .gnb-menu-wrapper-tm {
   display: none;
 }
-
 header {
   position: fixed;
   top: 0;
@@ -1001,16 +1000,15 @@ footer {
     width: 100%;
   }
   .search-tm {
-    width: 36px;
+    width: 34px;
     height: 64px;
     line-height: 64px;
-
     margin-right: 2rem;
     flex: none;
   }
   .search-tm img {
     width: 100%;
-    vertical-align: middle;
+    transform: translateY(40%);
   }
 
   /* ------tablet 햄버거 메뉴 시작------ */
@@ -1103,9 +1101,14 @@ footer {
     font-size: 1rem;
     font-weight: 400;
     height: 30px;
+    line-height: 30px;
     color: #a4a4a4;
   }
-  .gnb-log-in-tm {
+
+  .gnb-log-in-mobile {
+    display: none;
+  }
+  .gnb-log-in-tablet {
     width: 80%;
     margin: 0 auto;
     height: 30vh;
@@ -1113,18 +1116,18 @@ footer {
     justify-content: center;
     gap: 3rem;
   }
-  .gnb-log-in-tm div {
+  .gnb-log-in-tablet div {
     width: 100px;
     height: 30px;
   }
-  .gnb-log-in-tm div:nth-child(1) {
+  .gnb-log-in-tablet div:nth-child(1) {
     background: #cc1c28;
     border-radius: 6px;
     text-align: center;
     height: 30px;
     line-height: 30px;
   }
-  .gnb-log-in-tm div:nth-child(2) {
+  .gnb-log-in-tablet div:nth-child(2) {
     background: #6c6c6c;
     border-radius: 6px;
     text-align: center;
@@ -1357,6 +1360,9 @@ footer {
   }
 }
 @media screen and (max-width: 480px) {
+  html {
+    font-size: 7px;
+  }
   .pc-tablet-main {
     display: none;
   }
@@ -1385,14 +1391,14 @@ footer {
   }
   .gnb-logo-tm {
     flex: none;
-
+    width: 80px;
     margin-right: auto;
   }
   .gnb-logo-tm img {
     width: 100%;
   }
   .search-tm {
-    width: 34px;
+    width: 30px;
     height: 64px;
     line-height: 64px;
     margin-right: 2rem;
@@ -1460,48 +1466,84 @@ footer {
   .gnb-menu-wrapper-tm {
     display: none;
     height: 100vh;
+    position: relative;
+    overflow: scroll;
+    background-color: #131313;
   }
-  .gnb-li-tm {
-    height: 40px;
-    line-height: 40px;
-    text-indent: 20vw;
+  .gnb-menu-tm {
+    width: 100%;
+    display: block;
+    margin-top: 2rem;
   }
-  .gnb-li-tm a {
-    font-size: 1.5rem;
+  .gnb-li-tm > a {
+    font-size: 2rem;
+    text-indent: 10vw;
+    height: 6rem;
+    line-height: 6rem;
   }
-  .gnb-log-in-tm {
-    margin: 5vh auto 0 auto;
-    height: 30vh;
+  .gnb-li-tm > a.active-2 {
+    background-color: #000;
+  }
+
+  .gnb-sub-tm {
+    display: none;
+  }
+  .gnb-sub-tm.active-2 {
+    border-top: 1px solid #6c6c6c;
+    background-color: #242424;
+  }
+  .gnb-sub-li-tm {
+    height: 5rem;
+    line-height: 5rem;
+    text-indent: 15vw;
+  }
+  .gnb-sub-li-tm a {
+    font-size: 1.4rem;
+
+    color: #ececec;
+  }
+  .gnb-sub-li-tm a.active-2 {
+    color: #cc1c28;
+  }
+
+  .gnb-log-in-tablet {
+    display: none;
+  }
+  .gnb-log-in-mobile {
+    margin: 1rem auto;
     display: flex;
     justify-content: center;
     gap: 3rem;
   }
-  .gnb-log-in-tm div {
+  .gnb-log-in-mobile div {
     width: 100px;
     height: 30px;
   }
-  .gnb-log-in-tm div:nth-child(1) {
+  .gnb-log-in-mobile div:nth-child(1) {
     background: #cc1c28;
     border-radius: 6px;
     text-align: center;
     height: 30px;
     line-height: 30px;
   }
-  .gnb-log-in-tm div:nth-child(2) {
+  .gnb-log-in-mobile div:nth-child(2) {
     background: #6c6c6c;
     border-radius: 6px;
     text-align: center;
     height: 30px;
     line-height: 30px;
   }
-  .gnb-sub-tm {
-    display: none;
+  .search {
+    height: 8rem;
+  }
+  .search form {
+    width: 80%;
   }
   .search input {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .search button {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   /* =----end----- */
 

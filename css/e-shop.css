@@ -5,7 +5,7 @@ html {
   background: #242424;
   font-size: 10px;
   width: 100%;
-  min-width: 1400px;
+  /* min-width: 1400px; */
 }
 
 a {
@@ -168,6 +168,9 @@ header {
 .component2 {
   width: 100%;
   height: 228px;
+}
+.nav-wrapper-fake {
+  display: none;
 }
 .nav-wrapper {
   width: 80%;
@@ -687,28 +690,50 @@ footer {
 /* -------------footer 끝------------------ */
 
 /* -------------반응형 시작------------------ */
-@media screen and (max-width: 1568px) {
+@media screen and (min-width: 1273px) and (max-width: 1567px) {
   .product-title,
   .timesale-title {
-    margin-left: 10%;
+    margin-left: 15%;
   }
   .main-text-box,
   .nav-wrapper {
-    margin-left: 10%;
-    width: 90%;
+    margin-left: 15%;
+    width: 85%;
+  }
+  .nav {
+    width: 82%;
   }
   .banner1-wrapper,
   .cscenter-wrapper {
     width: 80%;
   }
   .product-box {
-    width: 117%;
+    width: 115%;
     position: relative;
-    left: -20%;
+    left: -15%;
   }
   .timesale-box {
-    width: 117%;
+    width: 115%;
     position: relative;
-    left: -20%;
+    left: -15%;
+  }
+}
+@media screen/* and (min-width: 1080px) */ and (max-width: 1272px) {
+  .nav-wrapper {
+    overflow: scroll;
+  }
+  .nav-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-li {
+    min-width: 177px;
+  }
+  .product-box {
+    width: 115%;
+    left: -10%;
+  }
+  .timesale-box {
+    width: 115%;
+    left: -10%;
   }
 }

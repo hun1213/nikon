@@ -1,19 +1,21 @@
 $(function () {
   //search 시작
   $(".search-icon").on("click", function () {
+    openSearch();
+  });
+
+  $(".search button, .modal").on("click", function () {
+    closeSearch();
+  });
+
+  openSearch = () => {
     $(".search").stop().slideDown(300);
     $(".modal").stop().show();
-  });
-
-  $(".search button").on("click", function () {
+  };
+  closeSearch = () => {
     $(".search").stop().slideUp(300);
     $(".modal").stop().hide();
-  });
-  $(".modal").on("click", function () {
-    $(".search").stop().slideUp(300);
-    $(this).stop().hide();
-  });
-
+  };
   //search 끝
 
   $(document).ready(function () {
@@ -24,7 +26,7 @@ $(function () {
       slidesToScroll: 2,
       responsive: [
         {
-          breakpoint: 1568,
+          breakpoint: 1567,
           settings: {
             slidesToShow: 4,
             slidesToScroll: 2,
@@ -42,7 +44,7 @@ $(function () {
       slidesToScroll: 2,
       responsive: [
         {
-          breakpoint: 1568,
+          breakpoint: 1567,
           settings: {
             slidesToShow: 4,
             slidesToScroll: 2,
