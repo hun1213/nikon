@@ -28,12 +28,13 @@ $(function () {
 
   openMobileMenu = () => {
     $(".hamburger-icon-tm").addClass("active-1");
-    $(".gnb-menu-wrapper-tm").stop().slideDown(300);
+    $(".gnb-panel-tm").stop().slideDown(300);
+    $(".modal").show();
   };
   closeMobileMenu = () => {
     $(".hamburger-icon-tm").removeClass("active-1");
-    $(".gnb-menu-wrapper-tm").stop().slideUp(300);
-    $(".gnb-sub-tm").stop().hide();
+    $(".gnb-panel-tm").stop().slideUp(300);
+    $(".modal").hide();
   };
 
   $(window).resize(function () {
@@ -43,7 +44,9 @@ $(function () {
       $(".hamburger-icon-tm").removeClass("active-1");
     }
   });
-
+  $(".modal").click(function () {
+    closeMobileMenu();
+  });
   $(".hamburger-icon-tm").click(function () {
     toggleMobileMenu();
   });
@@ -53,6 +56,13 @@ $(function () {
     closeSearch();
   });
   //search 끝
+
+  $(window).resize(function () {
+    const windowWidth = $(window).width();
+    if (windowWidth < 480) {
+      $(".product-box-li-fake").remove();
+    }
+  });
 
   $(document).ready(function () {
     $(".product-box").slick({
@@ -73,6 +83,15 @@ $(function () {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            variableWidth: true,
           },
         },
       ],
@@ -98,6 +117,15 @@ $(function () {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            variableWidth: true,
           },
         },
       ],
