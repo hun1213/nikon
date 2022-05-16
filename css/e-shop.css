@@ -226,7 +226,9 @@ header {
   width: 80%;
   margin-left: 20%;
 }
-
+.main-text-mobile {
+  display: none;
+}
 .main-text-box p:first-child {
   font-size: 2.5rem;
   font-weight: 400;
@@ -456,7 +458,6 @@ header {
 .component4 {
   width: 100%;
   height: 50.5rem;
-  margin-bottom: 112px;
 }
 .banner1-wrapper {
   width: 60%;
@@ -464,7 +465,7 @@ header {
 }
 .banner1-wrapper a {
   width: 100%;
-  height: 50.5rem;
+  height: 42.5rem;
   display: block;
   background-image: url("../img/Eshop/banner_1_pc.png");
   background-position: center;
@@ -495,7 +496,7 @@ header {
   opacity: 0.5;
   color: #ececec;
   text-indent: 0.2rem;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 .banner1-text p:nth-child(3):hover {
   opacity: 1;
@@ -508,7 +509,7 @@ header {
 .component5 {
   width: 100%;
   height: 65.8rem;
-  margin: 12rem 0;
+  margin: 6rem 0;
 }
 .timesale-wrapper {
   width: 100%;
@@ -592,12 +593,11 @@ header {
 }
 .cscenter-grid-container {
   width: 100%;
-
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 3rem;
-  margin-top: 53px;
+  margin-top: 3.5rem;
 }
 
 .cscenter-grid-item {
@@ -880,17 +880,18 @@ footer {
     background: #6c6c6c;
   }
   .x-icon span {
-    display: block;
-    width: 36px;
-    height: 3px;
+    display: none;
+    width: 26px;
+    height: 2px;
     background: #ececec;
     border-radius: 1.5px;
+    transition: all 0.2s;
   }
   .x-icon span:nth-child(1) {
-    transform: translateY(18px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
   }
   .x-icon span:nth-child(2) {
-    transform: translateY(15px) rotate(45deg);
+    transform: translateY(18px) rotate(45deg);
   }
   .go-search {
     border-radius: 20px;
@@ -1061,12 +1062,9 @@ footer {
   }
 
   .cscenter-grid-container {
-    width: 100%;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 3rem;
-    margin-top: 53px;
   }
 
   .cscenter-grid-item {
@@ -1151,6 +1149,13 @@ footer {
   .nav-wrapper {
     display: none;
   }
+  .component1 {
+    height: 287px;
+    display: block;
+  }
+  .main-text-box {
+    padding-top: 150px;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 722px) {
   .icon-box {
@@ -1165,6 +1170,9 @@ footer {
   }
   .menu-li-tm {
     width: 33.33333%;
+  }
+  .menu-li-tm:nth-child(2) .menu-li-tm::before {
+    display: none;
   }
   .product-box {
     width: 137%;
@@ -1207,9 +1215,44 @@ footer {
   .menu-li-tm {
     width: 50%;
     height: 12rem;
+    border-bottom: 1px solid #232323;
+  }
+  .menu-li-tm:nth-child(odd) {
+    border-right: 1px solid #232323;
+  }
+  .menu-li-tm:nth-child(n + 5) {
+    border-bottom: none;
+  }
+  .menu-li-tm::before {
+    display: none;
+  }
+  .menu-icon-wrapper-tm img {
+    width: 60%;
+    height: 60%;
+  }
+  .menu-name-tm {
+    font-size: 1.2rem;
   }
   .log-in-tm {
     bottom: 20%;
+  }
+  .main-text-box p:first-child {
+    font-size: 2rem;
+  }
+  .main-text-box p:nth-child(2) {
+    display: none;
+  }
+
+  .main-text-mobile {
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1.5rem;
+  }
+
+  .main-text-mobile span {
+    color: #cc1c28;
   }
   .component3 {
     margin-top: 0;
@@ -1229,7 +1272,7 @@ footer {
   .product-box-li {
     transform: scale(1);
     width: 300px;
-    height: 58rem;
+    height: 55rem;
   }
   .product-box {
     width: 100%;

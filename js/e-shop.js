@@ -18,6 +18,15 @@ $(function () {
   };
 
   //햄버거 메뉴
+
+  $(window).resize(function () {
+    const windowWidth = $(window).width();
+    if (windowWidth >= 1273) {
+      $(".gnb-panel.tm").css("display", "none");
+      $(".modal").css("display", "none");
+    }
+  });
+
   toggleMobileMenu = () => {
     if ($(".hamburger-icon-tm").hasClass("active-1") === true) {
       closeMobileMenu();
@@ -44,6 +53,7 @@ $(function () {
       $(".hamburger-icon-tm").removeClass("active-1");
     }
   });
+
   $(".modal").click(function () {
     closeMobileMenu();
   });
@@ -55,6 +65,17 @@ $(function () {
     closeMobileMenu();
     closeSearch();
   });
+
+  //search focus
+
+  const SEARCHINPUT = $(".search-tm form input");
+  SEARCHINPUT.focus(function () {
+    $(".x-icon span").css("display", "block");
+  });
+  SEARCHINPUT.blur(function () {
+    $(".x-icon span").css("display", "none");
+  });
+
   //search 끝
 
   $(window).resize(function () {
