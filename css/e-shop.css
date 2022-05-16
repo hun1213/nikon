@@ -871,14 +871,35 @@ footer {
     width: 40px;
     height: 40px;
     padding: 0;
-    border-radius: 20px;
     border: none;
   }
 
-  .go-search {
-    background: #ececec;
+  .x-icon {
+    width: 40px;
+    height: 40px;
+    background: #6c6c6c;
   }
-
+  .x-icon span {
+    display: block;
+    width: 36px;
+    height: 3px;
+    background: #ececec;
+    border-radius: 1.5px;
+  }
+  .x-icon span:nth-child(1) {
+    transform: translateY(18px) rotate(-45deg);
+  }
+  .x-icon span:nth-child(2) {
+    transform: translateY(15px) rotate(45deg);
+  }
+  .go-search {
+    border-radius: 20px;
+    background: #242424;
+    cursor: pointer;
+  }
+  .go-search {
+    width: 100%;
+  }
   .menu-wrapper-tm {
     width: 100%;
     margin-top: 3rem;
@@ -1170,6 +1191,14 @@ footer {
   .gnb-panel-tm {
     height: 100vh;
   }
+  .btns {
+    width: 85px;
+  }
+  .x-icon span {
+    width: 26px;
+    height: 2px;
+  }
+
   .menu-tm {
     height: 36rem;
     flex-wrap: wrap;
@@ -1181,6 +1210,9 @@ footer {
   }
   .log-in-tm {
     bottom: 20%;
+  }
+  .component3 {
+    margin-top: 0;
   }
   .slick-list {
     padding-left: 40px;
@@ -1207,11 +1239,12 @@ footer {
     width: 100%;
     left: 0;
   }
-  .product-box-wrapper {
-    margin-top: 2rem;
-  }
+  .product-box-wrapper,
   .timesale-box-wrapper {
-    margin-top: 2rem;
+    margin-top: 3rem;
+  }
+  .component4 {
+    margin-bottom: 6rem;
   }
   .grid-pc {
     display: block;
@@ -1288,13 +1321,18 @@ footer {
   }
   .map-icon-wrapper {
     max-width: 60px;
+    margin-top: 3rem;
   }
   .gear-icon {
     width: 40%;
     max-width: 50px;
+    right: 1.5rem;
+    bottom: 6rem;
   }
   .hand-icon {
     width: 80%;
     min-width: 100px;
+    right: 0.5rem;
+    bottom: 1.5rem;
   }
 } ;
