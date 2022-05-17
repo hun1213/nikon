@@ -175,10 +175,10 @@ $(function () {
       "img[src$='img/Eshop/icons/heart_on.svg'"
     ).length;
 
-    if ((CountReservedItems = 0)) {
-      HIDECOUNT;
-    } else {
+    if (CountReservedItems >= 1) {
       showCount();
+    } else {
+      HIDECOUNT;
     }
   });
 });
