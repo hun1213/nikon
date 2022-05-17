@@ -1150,7 +1150,7 @@ footer {
   }
   .left {
     width: 100%;
-    height: 730px;
+    height: 550px;
   }
   #b2 {
     display: none;
@@ -1627,7 +1627,6 @@ footer {
   .eshop-mobile-container {
     width: 100%;
     margin-top: 8vh;
-    background-color: #080808;
   }
   .eshop-mobile-wrapper {
     width: 90%;
@@ -1694,7 +1693,69 @@ footer {
     bottom: 0.8rem;
   }
   .eshop-entre {
+    text-align: center;
+
     background: #cc1c28;
+  }
+  .eshop-entre img {
+    width: 15%;
+  }
+  .eshop-entre a {
+    font-size: 3rem;
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* mobile event component */
+  .event-mobile-container {
+    width: 100%;
+    margin-top: 8vh;
+    height: 260px;
+    background-color: #080808;
+  }
+  .event-mobile-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .event-mobile-title {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .event-mobile-title h2 {
+    color: #ececec;
+    font-size: 5vw;
+  }
+  .eshop-mobile-box-wrapper {
+    overflow: visible;
+    padding-bottom: 2rem;
+  }
+
+  .event-mobile-box {
+    background: #ececec;
+    width: 80%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+  }
+  .event-mobile-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .event-mobile-box .eshop-mobile-box-image {
+    width: 100%;
+    border: 6px 6px 0 0;
+  }
+  .event-mobile-box .eshop-mobile-box-image img {
+    height: 100%;
+    border: 4px 4px 0 0;
   }
   /* the slides */
   .slick-slide {

@@ -30,6 +30,14 @@ $(function () {
       dots: false,
       infinite: false,
     });
+
+    $(".event-mobile-box-wrapper").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      infinite: false,
+    });
   });
   // gnb PC
   $("#product-gnb a").mouseenter(function () {

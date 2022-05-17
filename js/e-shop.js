@@ -75,6 +75,10 @@ $(function () {
   SEARCHINPUT.blur(function () {
     $(".x-icon span").css("display", "none");
   });
+  //x버튼 input 텍스트 삭제
+  $(".delete-input").click(function () {
+    $("search-tm input").val("");
+  });
 
   //search 끝
 
@@ -171,10 +175,10 @@ $(function () {
       "img[src$='img/Eshop/icons/heart_on.svg'"
     ).length;
 
-    if (CountReservedItems >= 1) {
-      showCount();
-    } else {
+    if ((CountReservedItems = 0)) {
       HIDECOUNT;
+    } else {
+      showCount();
     }
   });
 });
